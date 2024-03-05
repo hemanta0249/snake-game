@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background: url('../bg2.jpg');
+    background-size: 100vw 100vh;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    height: 350px;
+    height: 450px;
+    position: relative;
+    left: -5em;
+}
+#board{
+background: linear-gradient(rgb(170, 236, 170),rgb(256,236,167));
+width: 90vmin;
+height: 80vmin;
+border: 2px solid black;
+filter: drop-shadow(0 10px 25px green);
+background-position-x: -15em;
+background-position-y: 0;
+display: grid;
+grid-template-rows: repeat(18,1fr);
+grid-template-columns: repeat(18,1fr);
+}
+
+.head{
+   background: url('https://w7.pngwing.com/pngs/112/652/png-transparent-snake-free-content-cartoon-snake-material-cartoon-character-animals-photography.png');
+   background-size: cover;
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 10px;
+}
+#hiscoreBox{
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    font-size: 39px;
+    font-weight: 700;
+}
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 250px;
+    font-size: 39px;
+    font-weight: 700;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background:linear-gradient(orange,brown);
+    border-radius: 12px;
+}
+
+
+@media only screen and (max-width : 900px) {
+  #board{
+    width: 90vmin;
+    height: 70vmin;
+  }
+}
+@media only screen and (max-width : 450px) {
+    #scoreBox{
+        font-size: 35px;
+        right: 120px;
+        top: 1.5em;
+    }
+    #hiscoreBox{
+        font-size: 35px;
+        top: 2.8em;
+        right: 3em;
+    }
+  }
